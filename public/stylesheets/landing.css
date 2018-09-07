@@ -1,0 +1,83 @@
+body {
+  background-color: #000;
+  font-family: 'Raleway', sans-serif;
+}
+.colorChange {
+  animation: colorRotate 5s linear infinite;
+}
+
+@keyframes colorRotate {
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 30vh;
+}
+#landing-header h1 {
+  color: #fff;
+  text-shadow: 2px 3px #000;
+  font-size: 150px;
+}
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(https://images.unsplash.com/photo-1510200369638-0266d6457860?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78cb08b2c8ddb146f9e768aa104d3ec7&auto=format&fit=crop&w=1050&q=80) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://images.unsplash.com/photo-1520358889634-04b1a67b3f0c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9201ab80a7a3cbdd96d2817d95da5da&auto=format&fit=crop&w=1950&q=80);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://images.unsplash.com/photo-1510200369638-0266d6457860?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78cb08b2c8ddb146f9e768aa104d3ec7&auto=format&fit=crop&w=1050&q=80);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://images.unsplash.com/photo-1520358889634-04b1a67b3f0c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c9201ab80a7a3cbdd96d2817d95da5da&auto=format&fit=crop&w=1950&q=80);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://images.unsplash.com/photo-1510200369638-0266d6457860?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78cb08b2c8ddb146f9e768aa104d3ec7&auto=format&fit=crop&w=1050&q=80);
+  animation-delay: 40s; 
+}
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
